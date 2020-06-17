@@ -32,7 +32,7 @@ Servers = {}		# Initializing an empty dictionary
 # Otherwise store each argument in the Servers dictionary
 for argument in sys.argv [1 : len(sys.argv)] :
 
-	try : assert re.match(r'(.+):\d', argument) != None
+	try : assert re.match(r'(.+):\d+$', argument) != None
 	except :
 		print("\n\tPlease give input in the format of ServerName:LoadCapacity\n\tFor example: python3 LoadBalancer.py A:7\n\t\t  or python3 LoadBalancer.py A:7 V:3\n")
 		exit(0)
